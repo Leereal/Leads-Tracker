@@ -13,18 +13,6 @@ if(leadsFromLocalStorage){
     myLeads = JSON.parse(leadsFromLocalStorage)
     render(myLeads)
 }
-// function render(leads){
-//     let listItems = ""
-//     for(i=0;i<leads.length; i++){
-//         if(leads[i]===""){
-//             myLeads.splice(i,1)            
-//         }
-//         else{            
-//             listItems += `<li>${i+1}<a href='${leads[i]}' target='_blank'>${leads[i]}</a></li>`
-//         }
-//     }  
-//     ulEl.innerHTML = listItems
-// }
 
 function render(leads){
     let listItems = ""
@@ -57,7 +45,7 @@ inputBtn.addEventListener("click", function(){
         myLeads.push(tabs[0].url)   
         //Store value into localStorage
         localStorage.setItem("myLeads",JSON.stringify(myLeads)) 
-        //Call renderLeads functi   `on to display all the leads 
+        //Call renderLeads function to display all the leads 
         render(myLeads)     
       });    
  })
